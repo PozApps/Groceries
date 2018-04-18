@@ -16,6 +16,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemWeightLabel;
 @property (nonatomic, strong) Item *item;
 
-//- (id)initWithItem:(Item *)item;
-
 @end

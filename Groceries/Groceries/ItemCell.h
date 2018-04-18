@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GridItemCell : UICollectionViewCell
+@interface ItemCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIView *colorView;
 @property (weak, nonatomic) IBOutlet UILabel *itemNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemWeightLabel;

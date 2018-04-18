@@ -6,8 +6,8 @@
 //  Copyright © 2018 PozApps. All rights reserved.
 //
 
-#import "GridItemCell.h"
+#import "ItemCell.h"
 
-@implementation GridItemCell
+@implementation ItemCell
 
 @end

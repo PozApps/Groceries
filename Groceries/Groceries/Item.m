@@ -10,7 +10,7 @@
 
 @implementation Item
 
-- (id)initWithName:(NSString *)name andWeight:(NSString *)weight andColor:(UIColor *)color {
+- (id)initWithName:(NSString *)name weight:(NSString *)weight color:(UIColor *)color {
     self = [super init];
     if (self) {
         self.name = name;

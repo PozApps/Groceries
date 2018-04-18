@@ -6,5 +6,5 @@ target 'Groceries' do
   # use_frameworks!
 
   # Pods for Groceries
-	pod 'SocketRocket'
+  pod 'SocketRocket'
 end

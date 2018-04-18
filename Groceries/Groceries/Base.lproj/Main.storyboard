@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-791" y="132"/>
         </scene>
-        <!--Items Collection View Controller-->
+        <!--Groceries-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ItemsCollectionViewController" sceneMemberID="viewController">
@@ -40,13 +40,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Txi-x2-4FZ">
                                     <size key="itemSize" width="320" height="100"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListCell" id="IYg-F4-dbT" userLabel="ListItem" customClass="ItemCell">
-                                        <rect key="frame" x="27.5" y="50" width="320" height="100"/>
+                                        <rect key="frame" x="27.5" y="0.0" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -87,7 +87,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GridCell" id="K6y-RQ-5dF" customClass="ItemCell">
-                                        <rect key="frame" x="137.5" y="160" width="100" height="100"/>
+                                        <rect key="frame" x="137.5" y="110" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -135,32 +135,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gA8-0W-Dkb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08t-0s-dQt">
-                                            <rect key="frame" x="276.5" y="10" width="47" height="30"/>
-                                            <state key="normal" title="Toggle"/>
-                                            <connections>
-                                                <action selector="toggleLayouts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4o-EN-yEf"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="08t-0s-dQt" firstAttribute="centerX" secondItem="gA8-0W-Dkb" secondAttribute="centerX" id="sdh-YI-KMw"/>
-                                        <constraint firstItem="08t-0s-dQt" firstAttribute="centerY" secondItem="gA8-0W-Dkb" secondAttribute="centerY" id="t5U-hS-QQ7"/>
-                                    </constraints>
-                                </collectionReusableView>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOO-Th-Ige">
-                                <rect key="frame" x="260" y="617" width="99" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Toggle"/>
-                                <connections>
-                                    <action selector="toggleLayouts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vqu-It-2pZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -171,9 +146,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YND-xJ-a8m"/>
+                    <navigationItem key="navigationItem" title="Groceries" id="YND-xJ-a8m">
+                        <barButtonItem key="rightBarButtonItem" title="Grid" id="1nu-0e-22f">
+                            <connections>
+                                <action selector="toggleLayouts:" destination="BYZ-38-t0r" id="qcE-2z-Qpm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="itemsCollectionView" destination="kkk-6H-EqO" id="BI8-bF-A0c"/>
+                        <outlet property="toggleButton" destination="1nu-0e-22f" id="DaR-yC-zJd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

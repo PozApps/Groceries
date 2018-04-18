@@ -18,6 +18,9 @@
 }
 
 @property (weak, nonatomic) IBOutlet UICollectionView *itemsCollectionView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *toggleButton;
+
+
 @property (nonatomic) NSMutableArray *itemsArray;
 @property BOOL isGrid;
 
@@ -64,6 +67,11 @@
 
 - (IBAction)toggleLayouts:(id)sender {
     self.isGrid = !self.isGrid;
+    if (self.isGrid) {
+        self.toggleButton.title = @"List";
+    } else {
+        self.toggleButton.title = @"Grid";
+    }
     [self.itemsCollectionView reloadData];
 }
 
